@@ -1,20 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Description } from './Description';
+import { ProductCard } from './ProductCard';
 
-const initData = {
-  id: 1,
-  link: 'https://reactjs.org'
-}
+const productArray = [
+  {
+    id: 1,
+    name: 'Apple',
+  },
+  {
+    id: 2,
+    name: 'Orange',
+  },
+  {
+    id: 3,
+    name: 'Tomato',
+  },
+];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Description initData={initData} name = 'Andrey' />
-      </header>
+      {productArray.map(({ id, name }) => (
+        <ProductCard productName={name} key={id} />
+      ))}
     </div>
   );
 }
