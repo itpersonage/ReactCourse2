@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import { ProductCard } from './ProductCard';
+import { CustomInput } from './CustomInput';
 
 const productArray = [
   {
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <div className="App">
+      <CustomInput />
       {productArray.map(({ id, name }) => (
         <ProductCard productName={name} key={id} limCount={limCount} />
       ))}
