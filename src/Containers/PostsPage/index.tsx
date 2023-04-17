@@ -1,15 +1,20 @@
 import React from 'react';
+import styles from './PostPage.module.css';
 import { Header } from '../../Components/Commons/Header';
 import { Footer } from '../../Components/Commons/Footer';
 import { PostCard } from '../../Components/Posts/PostCard';
 
 export const PostsPage = () => {
   return (
-    <div>
+    <div className={styles.postPageWrapper}>
       <Header />
-      <span>PostsPage</span>
-      <PostCard />
+      <div className={styles.postList}>
+        <PostCard />
+        <PostCard />
+        <PostCard />
+        <PostCard />
+      </div>
       <Footer />
     </div>
-  )
+  );
 };

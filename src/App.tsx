@@ -1,11 +1,11 @@
 import React from 'react';
-import './App.css';
-import { MainPage } from './Containers/MainPage';
+import styles from './App.module.css';
+import { PostsPage } from './Containers/PostsPage';
 
 function App() {
   return (
-    <div className="App">
-      <MainPage />
+    <div className={styles.wrapper}>
+      <PostsPage />
     </div>
   );
 }
