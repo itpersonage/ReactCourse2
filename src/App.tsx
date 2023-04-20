@@ -3,13 +3,17 @@ import styles from './App.module.scss';
 import { Route, Routes } from 'react-router-dom';
 import { MainPage } from './Containers/MainPage';
 import { PostsPage } from './Containers/PostsPage';
+import { PostPage } from './Containers/PostPage';
 
 function App() {
   return (
     <div className={styles.wrapper}>
       <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/posts" element={<PostsPage />} />
+        <Route path="/" element={<MainPage />} />PostPage
+        <Route path="/posts">
+          <Route element={<PostsPage />} index />
+          <Route path='one-post' element={<PostPage />} />
+        </Route>
       </Routes>
     </div>
   );
