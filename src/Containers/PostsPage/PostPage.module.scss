@@ -1,13 +1,5 @@
-.postPageWrapper {
-    display: grid;
-    grid-template-rows: 100px auto 100px;
-    align-items: center;
-    height: 100%;
-
-    .postList {
-        display: grid;
-        grid-auto-flow: row;
-        gap: 20px;
-    }
+.postList {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 20px;
 }
-
