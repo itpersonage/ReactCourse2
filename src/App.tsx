@@ -1,24 +1,27 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import styles from './App.module.scss';
-import { Route, Routes } from 'react-router-dom';
+import { Layout } from './Components/Commons/Layouts';
 import { MainPage } from './Containers/MainPage';
-import { PostsPage } from './Containers/PostsPage';
 import { PostPage } from './Containers/PostPage';
-import { Layouts } from './Components/Commons/Layouts';
+import { PostsPage } from './Containers/PostsPage';
+import { ProductsPage } from './Containers/ProductsPage';
+import { routes } from './utils/constants/routes';
 
 function App() {
   return (
     <div className={styles.wrapper}>
-      <Layouts>
+      <Layout>
         <Routes>
-          <Route path="/" element={<MainPage />} />
-          PostPage
-          <Route path="/posts">
+          <Route path={routes.MAIN} element={<MainPage />} />
+          <Route path={routes.PRODUCTS} element={<ProductsPage />} />
+          <Route path={routes.POSTS}>
             <Route element={<PostsPage />} index />
             <Route path=":id" element={<PostPage />} />
           </Route>
+          <Route />
         </Routes>
-      </Layouts>
+      </Layout>
     </div>
   );
 }

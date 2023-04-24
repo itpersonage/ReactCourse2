@@ -1,10 +1,12 @@
 import React from 'react';
-import styles from './PostPage.module.scss';
 import { PostCard } from '../../Components/Posts/PostCard';
+import styles from './PostsPage.module.scss';
 
 export const PostsPage = () => {
   return (
     <div className={styles.postList}>
+      <PostCard />
+      <PostCard />
       <PostCard />
       <PostCard />
       <PostCard />

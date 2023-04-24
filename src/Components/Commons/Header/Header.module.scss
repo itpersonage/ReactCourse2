@@ -1,5 +1,13 @@
 .header {
-    width: 100%;
-    background-color:  blueviolet;
-    height: 100%;
+  width: 100%;
+  background-color: blueviolet;
+  height: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  a {
+    color: white;
+    text-decoration: none;
+  }
 }

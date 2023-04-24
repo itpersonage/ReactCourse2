@@ -3,15 +3,15 @@ import { Header } from '../Header';
 import { Footer } from '../Footer';
 import styles from './Layouts.module.scss';
 
-interface Tprops {
+interface TProps {
   children: JSX.Element;
 }
 
-export const Layouts = ({ children }: Tprops) => {
+export const Layout = ({ children }: TProps) => {
   return (
-    <div className={styles.mainPageWrapper}>
+    <div className={styles.postPageWrapper}>
       <Header />
-      {children}
+      <div className={styles.contentWrapper}>{children}</div>
       <Footer />
     </div>
   );

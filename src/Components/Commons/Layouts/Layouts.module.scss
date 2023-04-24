@@ -1,6 +1,12 @@
-.mainPageWrapper {
-    display: grid;
-    grid-template-rows: 100px auto 100px;
+.postPageWrapper {
+  display: grid;
+  grid-template-rows: 100px auto 100px;
+  align-items: center;
+  height: 100%;
+  .contentWrapper {
+    display: flex;
     align-items: center;
-    height: 100%;
+    justify-content: center;
+    padding: 20px;
+  }
 }

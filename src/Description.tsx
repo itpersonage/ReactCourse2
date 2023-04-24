@@ -1,22 +1,20 @@
 import React from 'react';
 
-interface Tprops {
+interface TProps {
   initData: {
-    id: number;
+    id: string;
     link: string;
   };
   name: string;
 }
 
-export const Description = ({ initData, name }: Tprops) => {
+export const Description = (props: TProps) => {
+  const { initData, name } = props;
   return (
     <>
-      {name}
-      <p>
-        Edit <code>src/App.tsx</code> and save to reload.
-      </p>
+      <p>{`Hello ${name}`}</p>
       <a className="App-link" href={initData.link} target="_blank" rel="noopener noreferrer">
-        Learn React {initData.id}
+        {`Learn React ${initData.id}`}
       </a>
     </>
   );
